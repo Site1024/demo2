@@ -1,12 +1,141 @@
+h3{
+    margin-top: 200px;
+}
+
 .stage{
     width: 100%;
     height: 500px;
-    background: lightgray;
+    background: rgb(0, 0, 0);
 }
 
 .ball{
     width: 100px;
     height: 100px;
-    border-radius: 100%;
-    background-color: tomato;
+    background-image: url(/assets/images/DVD_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation-name: slidein;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+} 
+
+@keyframes slidein {
+    0% {
+        transform: translateX(0);
+    }
+    
+    20% {
+        transform: translateY(400px) translateX(90vw);
+        background-color: blue;
+    }
+
+    40%{
+        transform: translateX(400px) translateY(200px);
+        background-color: purple;
+
+    }
+
+    60%{
+        transform: translateX(600px) translateY(400px);
+        background-color: green;
+    }
+
+    80%{
+        transform: translateX(700px) translateY(300px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translateX(800px) translateY(400px) ;
+        background-color: red;
+
+    }
+    
+} 
+
+
+
+
+.stage3{
+    width: 100vw;
+    height: 800px;
+    background-color: rgb(47, 98, 98);
+    position: relative;
 }
+
+.border{
+    width: 200px;
+    height: 30px;
+    background-color: gray;
+    rotate: 15deg;
+
+    position: absolute;
+    top: 20%;
+
+}
+
+.roof01{
+    width: 1000px;
+    height: 100px;
+    background-color: rosybrown;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.roof02{
+    width: 620px;
+    height: 100px;
+    background-color: rosybrown;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.ball3{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: yellowgreen;
+    animation-name: ballaction;
+    animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+}
+
+@keyframes ballaction{
+    0%{
+        transform: translateY(20px);
+    }
+    20%{
+        transform: translateX(200%) translateY(80px);
+    }
+    30%{
+        transform: translateX(400%) translateY(600px);
+    }
+    40%{
+        transform: translateX(500%) translateY(300px);
+    }
+    
+    50%{
+        transform: translateX(600px) translateY(600px);
+    }
+
+    60%{
+        transform: translateX(700px) translateY(400px);
+    }
+
+    80%{
+        transform: translateX(800px) translateY(600px);
+    }
+
+    90%{
+        transform: translateX(1000px) translateY(600px);
+    }
+
+    100%{
+        transform:  translateX(1000px) translateY(650px);
+    }
+} 
